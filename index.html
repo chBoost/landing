@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chBoost</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      .glow-text {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 7px rgb(255, 0, 0),
+          0 0 10px rgb(255, 0, 0);
+      }
+
+      .flip-card {
+        perspective: 1000px;
+      }
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #ff0000, #000000);
+        color: white;
+        border-radius: 15px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+      }
+      .flip-card-back {
+        transform: rotateY(180deg);
+        background: linear-gradient(135deg, #000000, #ff0000);
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="logo"
+          ><img src="imagenes\chboost.png" alt="Logo" width="80"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#sobre-mi">Sobre Mi</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#como-trabajo">Cómo Trabajo</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="btn btn-danger"
+                href="https://calendly.com/ccrespomartinez10/30min"
+                >Reserva tu llamada</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-center py-5 bg-light">
+      <div class="container">
+        <h1 class="fw-bold">
+          Descubre cómo <span class="text-danger glow-text">elevar</span> tu
+          <span class="text-danger glow-text">e-commerce</span>
+        </h1>
+        <h1 class="fw-bold">
+          usando mi
+          <span class="text-danger glow-text">sistema de boosteo</span>
+        </h1>
+        <div class="mt-5">
+          <video class="w-75 rounded" controls>
+            <source src="video.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
+        </div>
+        <a
+          class="btn btn-danger mt-4"
+          href="https://calendly.com/ccrespomartinez10/30min"
+        >
+          <i class="fas fa-phone-alt"></i> Reserva aquí tu llamada
+        </a>
+      </div>
+    </header>
+
+    <!-- Sobre Mi -->
+    <section id="sobre-mi" class="py-5 bg-secondary text-center">
+      <div class="container">
+        <h2 class="fw-bold mb-5 fs-1 text-light">Sobre Mi</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front p-5 shadow-lg">
+                  <h3 class="fw-bold">Misión</h3>
+                </div>
+                <div class="flip-card-back p-5 shadow-lg">
+                  <p>
+                    Nuestra misión es ayudar a los e-commerce a crecer mediante
+                    estrategias innovadoras.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front p-5 shadow-lg">
+                  <h3 class="fw-bold">Historia</h3>
+                </div>
+                <div class="flip-card-back p-5 shadow-lg">
+                  <p>
+                    Comenzamos con la idea de transformar el comercio
+                    electrónico con un enfoque moderno y eficaz.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front p-5 shadow-lg">
+                  <h3 class="fw-bold">Valores</h3>
+                </div>
+                <div class="flip-card-back p-5 shadow-lg">
+                  <p>
+                    Nos enfocamos en la transparencia, la innovación y el
+                    compromiso con nuestros clientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front p-5 shadow-lg">
+                  <h3 class="fw-bold">Visión</h3>
+                </div>
+                <div class="flip-card-back p-5 shadow-lg">
+                  <p>
+                    Aspiramos a ser líderes en soluciones para e-commerce,
+                    ayudando a miles de negocios a crecer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo Trabajamos -->
+    <section id="como-trabajo" class="py-5 bg-secondary text-black text-center">
+      <div class="container">
+        <h2 class="fw-bold mb-5 fs-1">¿Cómo trabajo?</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card p-5 text-dark shadow">
+              <h3>1. Análisis</h3>
+              <p>
+                Evaluamos el estado actual de tu e-commerce, identificamos
+                problemas y oportunidades.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-5 text-dark shadow">
+              <h3>2. Estrategias</h3>
+              <p>
+                Diseñamos y aplicamos estrategias personalizadas para optimizar
+                conversiones y ventas.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-5 text-dark shadow">
+              <h3>3. Seguimiento</h3>
+              <p>
+                Monitoreamos los resultados, ajustamos estrategias y escalamos
+                tu negocio al siguiente nivel.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reserva una llamada -->
+    <section class="py-5 text-center">
+      <div class="container">
+        <h2 class="fw-bold mb-4">Reserva una llamada conmigo</h2>
+        <p>
+          Agenda una consulta gratuita y descubre cómo puedo ayudarte a escalar
+          tu e-commerce.
+        </p>
+        <iframe
+          class="w-100"
+          height="600"
+          src="https://calendly.com/ccrespomartinez10/30min"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <a href="#top">
+              <img src="imagenes\chboost.png" alt="Logo" width="80" />
+            </a>
+          </div>
+          <div class="col-md-8">
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+              <a href="terminos.html" class="text-white text-decoration-none"
+                >Términos de Servicio</a
+              >
+              <a href="aviso-legal.html" class="text-white text-decoration-none"
+                >Aviso Legal</a
+              >
+              <a href="privacidad.html" class="text-white text-decoration-none"
+                >Política de Privacidad</a
+              >
+              <a href="cookies.html" class="text-white text-decoration-none"
+                >Política de Cookies</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
