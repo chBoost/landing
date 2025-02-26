@@ -22,6 +22,15 @@
           0 0 10px rgb(255, 0, 0);
       }
 
+      .glow-text1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 7px rgb(0, 0, 0),
+          0 0 10px rgb(0, 0, 0);
+      }
+
       .flip-card {
         perspective: 1000px;
       }
@@ -61,7 +70,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="logo"
+        <a class="navbar-brand fw-bold" 
           ><img src="imagenes\chboost.png" alt="Logo" width="80"
         /></a>
         <button
@@ -119,15 +128,15 @@
     </header>
 
     <!-- Sobre Mi -->
-    <section id="sobre-mi" class="py-5 bg-secondary text-center">
+    <section id="sobre-mi" class="py-5 bg-light text-center">
       <div class="container">
-        <h2 class="fw-bold mb-5 fs-1 text-light">Sobre Mi</h2>
+        <h2 class="fw-bold mb-5 fs-1 text-light glow-text">Sobre Mi</h2>
         <div class="row g-4">
           <div class="col-md-3">
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front p-5 shadow-lg">
-                  <h3 class="fw-bold">Misión</h3>
+                  <h3 class="fw-bold glow-text1">Misión</h3>
                 </div>
                 <div class="flip-card-back p-5 shadow-lg">
                   <p>
@@ -142,7 +151,7 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front p-5 shadow-lg">
-                  <h3 class="fw-bold">Historia</h3>
+                  <h3 class="fw-bold glow-text1">Historia</h3>
                 </div>
                 <div class="flip-card-back p-5 shadow-lg">
                   <p>
@@ -157,7 +166,7 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front p-5 shadow-lg">
-                  <h3 class="fw-bold">Valores</h3>
+                  <h3 class="fw-bold glow-text1">Valores</h3>
                 </div>
                 <div class="flip-card-back p-5 shadow-lg">
                   <p>
@@ -172,7 +181,7 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front p-5 shadow-lg">
-                  <h3 class="fw-bold">Visión</h3>
+                  <h3 class="fw-bold glow-text1">Visión</h3>
                 </div>
                 <div class="flip-card-back p-5 shadow-lg">
                   <p>
@@ -188,9 +197,9 @@
     </section>
 
     <!-- Cómo Trabajamos -->
-    <section id="como-trabajo" class="py-5 bg-secondary text-black text-center">
+    <section id="como-trabajo" class="py-5 bg-light text-black text-center">
       <div class="container">
-        <h2 class="fw-bold mb-5 fs-1">¿Cómo trabajo?</h2>
+        <h2 class="fw-bold mb-5 fs-1 glow-text">¿Cómo trabajo?</h2>
         <div class="row g-4">
           <div class="col-md-4">
             <div class="card p-5 text-dark shadow">
@@ -228,8 +237,7 @@
       <div class="container">
         <h2 class="fw-bold mb-4">Reserva una llamada conmigo</h2>
         <p>
-          Agenda una consulta gratuita y descubre cómo puedo ayudarte a escalar
-          tu e-commerce.
+          Agenda una llamada de Demo gratuita y descubre cómo puedo ayudarte a escalar tu e-commerce.
         </p>
         <iframe
           class="w-100"
