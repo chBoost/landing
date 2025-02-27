@@ -7,6 +7,6 @@ Este es un sitio web estático donde presento [tu idea, producto o servicio]. Es
 
 ## 🚀 Cómo verlo en vivo
 Puedes ver la página en línea aquí:  
-🔗 [https://cboost10.github.io/](https://cboost10.github.io/)  
+🔗 [https://chboost10.github.io/landing/](https://chboost.github.io/landing/)  
 
 ## 📂 Estructura del proyecto
