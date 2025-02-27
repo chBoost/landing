@@ -31,6 +31,15 @@
           0 0 10px rgb(0, 0, 0);
       }
 
+      .glow-text2 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #000000;
+        text-align: center;
+        text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 7px rgb(255, 0, 0),
+          0 0 10px rgb(255, 0, 0);
+      }
+
       .flip-card {
         perspective: 1000px;
       }
@@ -64,13 +73,96 @@
         transform: rotateY(180deg);
         background: linear-gradient(135deg, #000000, #ff0000);
       }
+
+      .timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 50px auto;
+      }
+      .timeline-item {
+        padding: 20px;
+        position: relative;
+        width: 50%;
+        background: white;
+        box-shadow: 0 4px 6px rgb(255, 0, 0);
+        border-radius: 8px;
+      }
+      .timeline-item.left {
+        left: 0;
+        text-align: left;
+      }
+      .timeline-item.right {
+        left: 50%;
+        text-align: right;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: red;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .timeline-item.left::before {
+        right: -15px;
+      }
+      .timeline-item.right::before {
+        left: -15px;
+      }
+
+      .event {
+        padding: 20px;
+        position: relative;
+        background: rgb(0, 0, 0);
+        border: 2px solid rgb(255, 0, 0);
+        border-radius: 10px;
+        width: 40%;
+        box-shadow: 0 0 15px rgb(255, 0, 0);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      .event:hover {
+        transform: scale(1.1);
+      }
+      .event:nth-child(odd) {
+        left: 0%;
+      }
+      .event:nth-child(even) {
+        left: 55%;
+      }
+
+      .event:nth-child(even)::before {
+        left: auto;
+        right: -20px;
+      }
+      .info-box {
+        display: none;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        color: #ffffff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgb(255, 0, 0);
+        z-index: 10;
+      }
+
+      body {
+        background-color: #0d0d0d;
+        color: #000000;
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+      }
     </style>
   </head>
   <body class="bg-light">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
       <div class="container">
-        <a class="navbar-brand fw-bold" 
+        <a class="navbar-brand fw-bold"
           ><img src="imagenes\chboost.png" alt="Logo" width="80"
         /></a>
         <button
@@ -140,7 +232,7 @@
                 </div>
                 <div class="flip-card-back p-5 shadow-lg">
                   <p>
-                    Nuestra misión es ayudar a los e-commerce a crecer mediante
+                    Mi misión es ayudar a los e-commerce a crecer mediante
                     estrategias innovadoras.
                   </p>
                 </div>
@@ -155,7 +247,7 @@
                 </div>
                 <div class="flip-card-back p-5 shadow-lg">
                   <p>
-                    Comenzamos con la idea de transformar el comercio
+                    Empecé con la idea de transformar el comercio
                     electrónico con un enfoque moderno y eficaz.
                   </p>
                 </div>
@@ -170,8 +262,8 @@
                 </div>
                 <div class="flip-card-back p-5 shadow-lg">
                   <p>
-                    Nos enfocamos en la transparencia, la innovación y el
-                    compromiso con nuestros clientes.
+                    Me enfoco en la transparencia, la innovación y el
+                    compromiso con mis clientes.
                   </p>
                 </div>
               </div>
@@ -185,7 +277,7 @@
                 </div>
                 <div class="flip-card-back p-5 shadow-lg">
                   <p>
-                    Aspiramos a ser líderes en soluciones para e-commerce,
+                    Aspiro a ser líder en soluciones para e-commerce,
                     ayudando a miles de negocios a crecer.
                   </p>
                 </div>
@@ -196,37 +288,61 @@
       </div>
     </section>
 
-    <!-- Cómo Trabajamos -->
-    <section id="como-trabajo" class="py-5 bg-light text-black text-center">
+    <!-- Cómo Trabajo - Línea Temporal -->
+    <section id="como-trabajo" class="py-5 text-white text-center">
       <div class="container">
         <h2 class="fw-bold mb-5 fs-1 glow-text">¿Cómo trabajo?</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card p-5 text-dark shadow">
-              <h3>1. Análisis</h3>
-              <p>
-                Evaluamos el estado actual de tu e-commerce, identificamos
-                problemas y oportunidades.
-              </p>
-            </div>
+        <div class="timeline" style="position: relative">
+          <div
+            class="event p-4 text-start"
+            style="width: 60%; position: relative; left: -10%"
+          >
+            <h3 class="text-danger">Paso 1 - Análisis Estratégico 🔍</h3>
+            <p>
+              "Todo crecimiento comienza con un diagnóstico claro." En esta
+              fase, analizo la situación actual de la empresa del cliente,
+              identifico oportunidades de crecimiento y establezco objetivos
+              medibles.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="card p-5 text-dark shadow">
-              <h3>2. Estrategias</h3>
-              <p>
-                Diseñamos y aplicamos estrategias personalizadas para optimizar
-                conversiones y ventas.
-              </p>
-            </div>
+          <div
+            class="event p-4 text-end"
+            style="width: 60%; position: relative; left: 50%"
+          >
+            <h3 class="text-danger">
+              Paso 2 - Desarrollo de Estrategia Personalizada 📊
+            </h3>
+            <p>
+              "No hay una fórmula única para el éxito, cada empresa es
+              diferente." Creo un plan de crecimiento a medida, combinando
+              estrategias de marketing digital, optimización de conversiones y
+              branding.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="card p-5 text-dark shadow">
-              <h3>3. Seguimiento</h3>
-              <p>
-                Monitoreamos los resultados, ajustamos estrategias y escalamos
-                tu negocio al siguiente nivel.
-              </p>
-            </div>
+          <div
+            class="event p-4 text-start"
+            style="width: 60%; position: relative; left: -10%"
+          >
+            <h3 class="text-danger">
+              Paso 3 - Implementación y Optimización 🚀
+            </h3>
+            <p>
+              "Pasamos de la estrategia a la acción." Ejecuto la estrategia con
+              campañas, automatización y mejoras en el embudo de ventas,
+              midiendo resultados en tiempo real y optimizando continuamente.
+            </p>
+          </div>
+          <div
+            class="event p-4 text-end"
+            style="width: 60%; position: relative; left: 50%"
+          >
+            <h3 class="text-danger">Paso 4 - Escalamiento y Expansión 🌍</h3>
+            <p>
+              "El crecimiento no termina, siempre hay nuevas oportunidades."
+              Ayudo a la empresa a expandirse a nuevos mercados, mejorar su
+              posicionamiento y consolidarse como una marca líder en su
+              industria.
+            </p>
           </div>
         </div>
       </div>
@@ -235,9 +351,10 @@
     <!-- Reserva una llamada -->
     <section class="py-5 text-center">
       <div class="container">
-        <h2 class="fw-bold mb-4">Reserva una llamada conmigo</h2>
+        <h2 class="fw-bold mb-4 glow-text2">Reserva una llamada conmigo</h2>
         <p>
-          Agenda una llamada de Demo gratuita y descubre cómo puedo ayudarte a escalar tu e-commerce.
+          Agenda una llamada de Demo gratuita y descubre cómo puedo ayudarte a
+          escalar tu e-commerce.
         </p>
         <iframe
           class="w-100"
@@ -277,6 +394,20 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    >
+
+      function showInfo(event, text) {
+              let infoBox = document.getElementById('info-box');
+              infoBox.innerText = text;
+              infoBox.style.display = 'block';
+              infoBox.style.top = (event.clientY + 10) + 'px';
+              infoBox.style.left = (event.clientX + 10) + 'px';
+            }
+            function hideInfo() {
+              document.getElementById('info-box').style.display = 'none';
+            }
+    </script>
   </body>
 </html>
